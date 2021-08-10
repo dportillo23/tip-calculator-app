@@ -49,9 +49,7 @@ export default function App() {
 
   const onTipClick = (data) => {
     setCustomTip("")
-    console.log(data.lastChild.value);
     setTip(data.lastChild.value)
-    console.log(tip);
   }
 
 //  Use effect to calculate tip per person and total per person in each render
