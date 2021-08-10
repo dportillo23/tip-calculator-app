@@ -1,18 +1,7 @@
-import { useState } from "react";
 import buttonsData from "../buttonData";
 import TipButton from "./TipButton";
 
 export default function SelectTip(props) {
-    
-
-    const handleClick = (e) => {
-        const activeButton = document.getElementById(e.target.id);
-        activeButton.classList.add("active");   
-    }
-
-    // const removeActive = () => {
-        
-    // }
 
     const handleChange = (e) => {
         props.handleChange(e.target.value);
