@@ -56,7 +56,7 @@ export default function App() {
   useEffect(() => {
     const tipPerson = customTip ? (inputData.bill * customTip / 100) / inputData.people : (inputData.bill * tip / 100) / inputData.people
     const totalPerson = customTip ? (inputData.bill * (1 + customTip / 100)) / inputData.people : (inputData.bill * (1 + tip / 100)) / inputData.people
-    if (totalPerson && totalPerson !== Infinity) {
+    if (totalPerson && totalPerson !== Infinity && inputData.bill >= 0 && inputData.people >= 0) {
       setOutput({
         tip: tipPerson,
         total: totalPerson

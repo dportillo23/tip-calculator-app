@@ -91,7 +91,7 @@ input:focus {
   border: #26c0ab 2px solid;
 }
 
-input.error {
+input.error, input.negative {
   border: #cc7860 2px solid;
 }
 
@@ -123,6 +123,14 @@ input::placeholder {
 
 .textbox.error::after {
   content: "Can't be zero";
+  color: #cc7860;
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+}
+
+.textbox.negative::after {
+  content: "Can't be negative";
   color: #cc7860;
   position: absolute;
   right: 0;
